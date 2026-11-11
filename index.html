@@ -55,7 +55,10 @@ button:focus-visible{outline:3px solid var(--kuerbis);outline-offset:2px}
   background:#fffdf4;color:#1c1a14;font-weight:700;font-size:clamp(11px,2.4vw,15px);line-height:1.2;padding:6px 10px;border-radius:12px;
   width:max-content;max-width:190%;text-align:center;pointer-events:none;box-shadow:0 2px 0 rgba(0,0,0,.25)}
 .blase.an{opacity:1;transform:translateX(-50%) scale(1)}
-#muh{bottom:auto;top:36%;left:50%;font-size:clamp(10px,2vw,13px);padding:3px 8px}
+#muh{bottom:39%;left:50%;font-size:clamp(11px,2.3vw,15px);padding:6px 10px;max-width:56%;width:max-content;border:2px solid #22201c;z-index:3}
+#kuh{transform-box:fill-box;transform-origin:50% 70%}
+#kuht{font-weight:400;font-style:italic;color:var(--leise);margin-top:2px}
+#kuht:empty{display:none}
 .proj{position:absolute;font-size:clamp(22px,6vw,40px);line-height:1;transform:translate(-50%,-50%);pointer-events:none}
 .proj.oel{width:5%;aspect-ratio:1;border-radius:60% 40% 55% 45%;background:#2a3310;border:2px solid #485a16}
 .schweb{position:absolute;top:30%;transform:translateX(-50%);font-family:var(--display);font-weight:800;font-size:clamp(24px,6vw,40px);
@@ -159,17 +162,24 @@ button:focus-visible{outline:3px solid var(--kuerbis);outline-offset:2px}
         <path d="M552 298 L591 268 L630 298Z" fill="#4a3220"/>
         <rect x="584" y="312" width="14" height="20" fill="#2e1f14"/>
       </g>
-      <g id="kuh">
+      <g transform="translate(-140 -122) scale(1.35)"><g id="kuh">
+        <path d="M366 336 q-16 -10 -8 -26" stroke="#f4f1e8" stroke-width="4" fill="none" stroke-linecap="round"><animate attributeName="d" dur="0.7s" repeatCount="indefinite" values="M366 336 q-16 -10 -8 -26;M366 336 q-20 0 -22 -16;M366 336 q-16 -10 -8 -26"/></path>
         <rect x="372" y="352" width="6" height="22" fill="#f4f1e8"/><rect x="386" y="352" width="6" height="22" fill="#f4f1e8"/>
         <rect x="412" y="352" width="6" height="22" fill="#f4f1e8"/><rect x="424" y="352" width="6" height="22" fill="#f4f1e8"/>
         <ellipse cx="400" cy="342" rx="36" ry="18" fill="#f4f1e8"/>
         <ellipse cx="392" cy="338" rx="12" ry="8" fill="#6b4a2f"/><ellipse cx="418" cy="348" rx="8" ry="6" fill="#6b4a2f"/>
-        <ellipse cx="440" cy="330" rx="13" ry="11" fill="#f4f1e8"/>
-        <ellipse cx="447" cy="335" rx="7" ry="5" fill="#eab6b0"/>
-        <circle cx="438" cy="327" r="2" fill="#22201c"/><circle cx="446" cy="327" r="2" fill="#22201c"/>
-        <path d="M430 320 l-6 -7 l8 3z" fill="#d8d2c0"/><path d="M448 320 l6 -7 l-8 3z" fill="#d8d2c0"/>
-        <rect x="436" y="341" width="8" height="8" rx="2" fill="#d9a520"/>
-      </g>
+        <g><animateTransform attributeName="transform" type="rotate" values="-9 436 340;10 436 340;-9 436 340" dur="1.1s" repeatCount="indefinite"/>
+          <path d="M428 318 l-9 -9 l11 3z" fill="#d8d2c0"/><path d="M450 318 l9 -9 l-11 3z" fill="#d8d2c0"/>
+          <ellipse cx="440" cy="330" rx="15" ry="13" fill="#f4f1e8"/>
+          <ellipse cx="447" cy="337" rx="9" ry="6" fill="#eab6b0"/>
+          <path d="M443 341 q1 12 6 12 q5 0 4 -12z" fill="#e2496b"/>
+          <circle cx="433" cy="324" r="7" fill="#ffffff" stroke="#22201c" stroke-width="1"/><circle cx="448" cy="322" r="4.5" fill="#ffffff" stroke="#22201c" stroke-width="1"/>
+          <circle cx="436" cy="324" r="2.6" fill="#22201c"><animateTransform attributeName="transform" type="rotate" from="0 433 324" to="360 433 324" dur="0.9s" repeatCount="indefinite"/></circle>
+          <circle cx="450" cy="322" r="1.8" fill="#22201c"><animateTransform attributeName="transform" type="rotate" from="360 448 322" to="0 448 322" dur="0.6s" repeatCount="indefinite"/></circle>
+          <path d="M436 312 l4 -12 l5 12z" fill="#e2496b"/><circle cx="440" cy="299" r="2.5" fill="#ffe26a"/>
+          <rect x="436" y="344" width="8" height="8" rx="2" fill="#d9a520"/>
+        </g>
+      </g></g>
     </svg>
     <div class="blase" id="muh"></div>
     <div class="kaempfer l" id="k0"><div class="blase" id="b0"></div><div class="figur" id="f0"></div></div>
@@ -178,7 +188,7 @@ button:focus-visible{outline:3px solid var(--kuerbis);outline-offset:2px}
     <div class="banner" id="banner" hidden></div>
   </div>
 
-  <div id="log" role="status" aria-live="polite">Such dir aus, für wen du zuhaust.</div>
+  <div id="log" role="status" aria-live="polite"><div id="logt">Such dir aus, für wen du zuhaust.</div><div id="kuht"></div></div>
 
   <div id="wahlbox">
     <div class="wahl">
@@ -193,7 +203,7 @@ button:focus-visible{outline:3px solid var(--kuerbis);outline-offset:2px}
     <p id="thin"></p>
     <div class="spur" id="spur"><div class="zt"></div><div class="zk"></div><div class="zeiger" id="zeiger"></div></div>
     <div class="legende"><span><i style="background:var(--kuerbis)"></i>Volltreffer</span><span><i style="background:#3f6b3a"></i>Treffer</span><span><i style="background:#0e1913;border:1px solid var(--rand)"></i>daneben</span></div>
-    <button class="haupt" id="hau" type="button">Zuhauen (Leertaste)</button>
+    <button class="haupt" id="hau" type="button">Zuhauen (Leertaste oder Tippen)</button>
   </div>
 </div>
 
@@ -319,6 +329,7 @@ const SFX={
   rumpel(){rausch(ac.currentTime,1,120,'lowpass',.9)},
   prost(){const t=ac.currentTime;ton(1568,t,.5,'sine',.15);ton(2093,t+.05,.5,'sine',.1)},
   donner(){rausch(ac.currentTime,.9,90,'lowpass',.9)},
+  muh(){const t=ac.currentTime,o=ton(150,t,.7,'sawtooth',.1);o.frequency.linearRampToValueAtTime(260,t+.15);o.frequency.linearRampToValueAtTime(90,t+.45);o.frequency.linearRampToValueAtTime(330,t+.6)},
   klick(){ton(2400,ac.currentTime,.05,'square',.08)},
   sieg(){const t=ac.currentTime;[523,659,784,1047].forEach((f,i)=>ton(f,t+i*.14,.3,'square',.09))},
   pech(){const t=ac.currentTime;[392,370,349,294].forEach((f,i)=>ton(f,t+i*.24,.34,'sawtooth',.07))}
@@ -343,9 +354,38 @@ function zeig(ko){
   }
   $('stand').textContent=S.pick?'Runde '+S.round+' · '+S.wins[0]+' : '+S.wins[1]:'';
 }
-function log(t){$('log').textContent=t}
+function log(t){$('logt').textContent=t}
 function sag(i,t,ms){const b=$('b'+i);b.textContent=t;b.classList.add('an');clearTimeout(b._t);b._t=setTimeout(()=>b.classList.remove('an'),ms||1300)}
-function muh(){const b=$('muh');b.textContent=rnd(['Muh.','Muh?!','Muuuh!','Mahlzeit.']);b.classList.add('an');clearTimeout(b._t);b._t=setTimeout(()=>b.classList.remove('an'),1300)}
+const KUH={
+ start:['Oha, zwei Kasperl auf meiner Wiese. Des wird a langer Nachmittag.','Eintritt hab i keinen zahlt. Trotzdem will i mei Geld zurück.'],
+ hit:['Des nennst du an Schlag? Mei Kalb haut fester.','I hab schon Melkmaschinen mit mehr Gefühl gsehn.','Zwei Deppen, eine Wiese, und i hab den Logenplatz. Muahaha!','Wenn des so weitergeht, geb i freiwillig saure Milch.','Schlimmer als der Almabtrieb. Und da gehts wenigstens bergab.','Hat wer mitgschrieben? Nein? Gut so.','I hab vier Mägen, und alle vier drahn sich um.'],
+ wien:['Immer no besser als a Wiener auf der Alm. Der streichelt mi und sagt Pferd.','A Wiener tät jetzt a Beschwerde schreiben. Mit Durchschlag.','Wenigstens raunzen die zwei net. Dafür gibts eh Wien.','A Wiener hat mi amol gfragt, wo bei mir die Hafermilch rauskommt.','Die Wiener glauben, i bin lila. Die zwei da san bald blau.','A Wiener gäb dem Ganzen an Stern: zu viel Natur, zu wenig Parkplatz.','In Wien nennens sowas Kultur und verlangen Eintritt.','Der Wiener fragt bei so was zerst, obs a U-Bahn-Station gibt.'],
+ miss:['Daneben! Der trifft net amol a Kuh auf fünf Meter. I weiß es, i steh da.','So zielt sonst nur a Wiener beim Einparken.','Die Luft hat er troffn. Die Luft is schwer verletzt.','Soll i a Glockn umhängen, damit er was findet?','Des war so knapp wie Wien am Meer.'],
+ crit:['Auweh! Des hat ma bis Wien ghört. Dort hams aber nur drüber gsudert.','Volltreffer! Endlich passiert was, i wollt scho wiederkäuen gehn.','Der sieht jetzt mehr Sterne als a Wiener Ringstraßenhotel.','Sauber! Des gibt a Beule mit Fernblick.','Muahaha! Nochmal! Nochmal!'],
+ lawine:['A Lawine mitten im Sommer. Typisch Tiroler, immer übertreiben.','Na super, jetzt is mei Wiesn weiß. Bin i a Schneekuh oder was?'],
+ schank:['Jausnen mitten im Kampf. Endlich a Vernünftiger.','Und wo is mei Schilcher? Die Kuh kriegt wieder nix.'],
+ gewitter:['Nass werdn beide. Gscheiter wird keiner.','Sogar der Himmel hat gnug gsehn.'],
+ tourist:['Mi fotografiert er net. Dabei bin i die Einzige mit Talent.','Sicher a Wiener. Der sucht da heroben an Würstelstand.'],
+ runde:['Is es vorbei? Nein? Schade.','Aufwachen, die Runde is aus! Ah, i hab mi selber gmeint.','Noch a Runde? I hätt gern mei Anwältin gsprochn.'],
+ aus:['Gott sei Dank is aus. I hab scho Euterweh vom Zuschaun.','Großes Theater. Großes schlechtes Theater. Muahaha!','Und jetzt alle zwei ab nach Wien, zur Strafe.']
+};
+let kuhAlt='';
+function kuhTanz(){
+  if(RM)return;const k=$('kuh'),T=[
+   [{transform:'translateY(0) rotate(0)'},{transform:'translateY(-45%) rotate(180deg)'},{transform:'translateY(0) rotate(360deg)'}],
+   [{transform:'scale(1)'},{transform:'scale(2.3) rotate(-12deg)'},{transform:'scale(2.3) rotate(12deg)'},{transform:'scale(1)'}],
+   [{transform:'rotate(0)'},{transform:'rotate(180deg)',offset:.2},{transform:'rotate(180deg)',offset:.8},{transform:'rotate(360deg)'}],
+   [{transform:'translateX(0) scaleX(1)'},{transform:'translateX(-90%) scaleX(1)'},{transform:'translateX(-90%) scaleX(-1)'},{transform:'translateX(90%) scaleX(-1)'},{transform:'translateX(90%) scaleX(1)'},{transform:'translateX(0) scaleX(1)'}],
+   [{transform:'translate(0,0) rotate(0)'},{transform:'translate(-8%,-12%) rotate(-20deg)'},{transform:'translate(8%,0) rotate(20deg)'},{transform:'translate(-8%,-12%) rotate(-20deg)'},{transform:'translate(8%,0) rotate(20deg)'},{transform:'translate(0,0) rotate(0)'}]
+  ];
+  k.animate(rnd(T),{duration:1100,easing:'ease-in-out'});
+}
+function kuh(kat){
+  let pool=KUH[kat]||KUH.hit;if(kat==='hit'&&Math.random()<.4)pool=KUH.wien;
+  let t=rnd(pool),n=0;while(t===kuhAlt&&n++<5)t=rnd(pool);kuhAlt=t;
+  const b=$('muh');b.textContent=t;b.classList.add('an');clearTimeout(b._t);b._t=setTimeout(()=>b.classList.remove('an'),3400);
+  $('kuht').textContent='Die Kuh: „'+t+'“';sfx('muh');kuhTanz();
+}
 function schweb(i,t,cls){const e=document.createElement('div');e.className='schweb '+(cls||'');e.textContent=t;e.style.left=(i===0?23:77)+'%';
   $('buehne').appendChild(e);const a=e.animate([{transform:'translate(-50%,0)',opacity:1},{transform:'translate(-50%,-90%)',opacity:0}],{duration:1000,easing:'ease-out'});a.onfinish=()=>e.remove()}
 function wackel(i){$('k'+i).animate([{transform:'translateX(0)'},{transform:'translateX(-6%)'},{transform:'translateX(6%)'},{transform:'translateX(-4%)'},{transform:'translateX(0)'}],{duration:320})}
@@ -373,11 +413,15 @@ function timing(m,shaky){
     function tick(t){if(!lauf)return;const dt=Math.min(.05,(t-last)/1000);last=t;p+=dir*v*dt;if(p>1){p=1;dir=-1}if(p<0){p=0;dir=1}z.style.left=p*100+'%';requestAnimationFrame(tick)}
     requestAnimationFrame(tick);
     stopp=async()=>{if(!lauf)return;lauf=false;stopp=null;sfx('klick');const d=Math.abs(p-.5);await sleep(280);$('timing').hidden=true;res(d<kw/2?'crit':d<hw/2?'hit':'miss')};
-    $('hau').focus({preventScroll:true});
+    $('hau').focus({preventScroll:true});window.focus();
   });
 }
 $('hau').addEventListener('click',()=>{if(stopp)stopp()});
-document.addEventListener('keydown',e=>{if((e.code==='Space')&&stopp){e.preventDefault();if(e.target!==$('hau'))stopp()}});
+function taste(e){const sp=e.code==='Space'||e.key===' '||e.key==='Spacebar'||e.key==='Enter';if(!sp)return;
+  if(stopp){e.preventDefault();e.stopPropagation();if(!e.repeat)stopp()}else if(!$('timing').hidden||e.target===$('hau'))e.preventDefault()}
+window.addEventListener('keydown',taste,true);
+window.addEventListener('keyup',e=>{if((e.code==='Space'||e.key===' ')&&e.target===$('hau'))e.preventDefault()},true);
+$('buehne').addEventListener('pointerdown',()=>{if(stopp)stopp()});
 
 /* ---------- Kampf ---------- */
 function aktionen(){
@@ -404,8 +448,8 @@ async function fuehrAus(a,m,res){
   if(m.special==='schank'){
     att.sp=0;att.hp=Math.min(100,att.hp+m.heal);att.dbl=true;att.half=false;att.face=null;
     sfx('prost');schweb(a,'+'+m.heal,'heil');zeig();
-    log(wer+' macht Brettljause: +'+m.heal+' Schneid, und der nächste Schlag zählt doppelt.');
-    await sleep(900);return;
+    log(wer+' macht Brettljause: +'+m.heal+' Schneid, und der nächste Schlag zählt doppelt.');kuh('schank');
+    await sleep(1700);return;
   }
   let d=0;
   if(m.special==='lawine'){
@@ -421,8 +465,8 @@ async function fuehrAus(a,m,res){
     else await vor(a);
     if(res==='miss'){
       sfx('miss');schweb(1-a,'daneben','fehl');att.half=false;att.dbl=false;att.face=null;zeig();
-      log(wer+' haut mit „'+m.name+'“ daneben.');sag(1-a,rnd(['Ha!','Daneben!','Brille vergessen?']),900);
-      await sleep(900);return;
+      log(wer+' haut mit „'+m.name+'“ daneben.');sag(1-a,rnd(['Ha!','Daneben!','Brille vergessen?']),900);kuh('miss');
+      await sleep(1700);return;
     }
     d=schaden(att,m,res);sfx(m.sfx);
   }
@@ -432,25 +476,26 @@ async function fuehrAus(a,m,res){
   if(m.fx)tgt[m.fx]=m.fxName;if(m.oil)tgt.oil=true;if(m.face)tgt.face=m.face;
   wackel(1-a);schweb(1-a,'−'+d);zeig();
   if(tgt.hp>0)sag(1-a,rnd(AUA),900);
-  if(res==='crit'){muh();log('Volltreffer! '+wer+' trifft mit „'+m.name+'“: −'+d+' Schneid.');}
+  kuh(m.special==='lawine'?'lawine':res);
+  if(res==='crit'){log('Volltreffer! '+wer+' trifft mit „'+m.name+'“: −'+d+' Schneid.');}
   else log(wer+' trifft mit „'+m.name+'“: −'+d+' Schneid.'+(m.fx?' Der Gegner ist jetzt „'+m.fxName+'“.':''));
-  await sleep(950);
+  await sleep(1700);
 }
 async function ende(){
   const v=S.f[0].hp<=0?0:S.f[1].hp<=0?1:-1;if(v<0)return false;
   const sieger=1-v;S.wins[sieger]++;zeig(v);$('aktionen').hidden=true;
   await sleep(900);
   if(S.wins[sieger]>=2){
-    sfx(sieger===0?'sieg':'pech');
+    sfx(sieger===0?'sieg':'pech');kuh('aus');
     banner('<h2>'+(sieger===0?'Gewonnen!':'Verloren!')+'</h2><p>'+NAME[S.f[sieger].kind]+' gewinnt '+S.wins[sieger]+' : '+S.wins[v]+'. Der Verlierer zahlt die Runde Schnaps. Danach schimpfen beide gemeinsam über die Wiener.</p><div class="reihe"><button class="haupt" id="revanche" type="button">Revanche</button><button class="klein" id="wechsel" type="button">Figur wechseln</button></div>');
     $('revanche').addEventListener('click',()=>start(S.pick));
     $('wechsel').addEventListener('click',zurWahl);
     log(sieger===0?'Du hast das Duell gewonnen.':'Der Computer hat das Duell gewonnen.');
     return true;
   }
-  S.round++;
+  S.round++;kuh('runde');
   banner('<h2>Runde '+S.round+'</h2><p>'+NAME[S.f[sieger].kind]+' holt sich die Runde. Stand '+S.wins[0]+' : '+S.wins[1]+'.</p>');
-  await sleep(1700);$('banner').hidden=true;
+  await sleep(2600);$('banner').hidden=true;
   S.f.forEach(f=>{f.hp=100;f.half=false;f.shaky=false;f.dbl=false;f.face=null});
   zeig();log('Neue Runde. Die Beulen bleiben. Du bist dran.');
   S.busy=false;aktionen();
@@ -458,13 +503,13 @@ async function ende(){
 }
 async function zufall(){
   if(Math.random()<.5){
-    log('Ein Gewitter zieht auf. Beide werden nass und verlieren 5 Schneid.');sfx('donner');await blitz(2);
+    log('Ein Gewitter zieht auf. Beide werden nass und verlieren 5 Schneid.');sfx('donner');kuh('gewitter');await blitz(2);
     S.f.forEach(f=>{f.hp=Math.max(1,f.hp-5);f.minHp=Math.min(f.minHp,f.hp)});schweb(0,'−5');schweb(1,'−5');
   }else{
-    log('Ein Tourist fotografiert die beiden. Vor Stolz laden sich die Spezialleisten um 15 % auf.');sfx('klick');await blitz(1);
+    log('Ein Tourist fotografiert die beiden. Vor Stolz laden sich die Spezialleisten um 15 % auf.');sfx('klick');kuh('tourist');await blitz(1);
     S.f.forEach(f=>{f.sp=Math.min(100,f.sp+15)});sag(0,'Cheese!',900);sag(1,'Servas!',900);
   }
-  zeig();await sleep(1300);
+  zeig();await sleep(2200);
 }
 async function waehle(i){
   if(S.busy)return;
@@ -493,11 +538,11 @@ function start(pick){
   tonInit();frisch(pick);
   $('banner').hidden=true;$('wahlbox').hidden=true;$('timing').hidden=true;
   zeig();log('Runde 1. Du bist dran: such dir einen Schlag aus.');
-  S.busy=false;aktionen();
+  S.busy=false;aktionen();kuh('start');
 }
 function zurWahl(){
   frisch(null);$('banner').hidden=true;$('aktionen').hidden=true;$('timing').hidden=true;$('wahlbox').hidden=false;
-  zeig();log('Such dir aus, für wen du zuhaust.');
+  zeig();log('Such dir aus, für wen du zuhaust.');$('kuht').textContent='';
 }
 $('wahl-tirol').addEventListener('click',()=>start('tirol'));
 $('wahl-steier').addEventListener('click',()=>start('steier'));
